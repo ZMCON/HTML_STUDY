@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML表格创建测试代码</title>
+</head>
+
+<body>
+
+<table border="2">
+<tr>
+<td>100</td>
+<td>200</td>
+</tr>
+
+<tr>
+<td>300</td>
+<td>400</td>
+</tr>
+
+</body>
+</html>
+-->
+
+<!--创建表格的时候注意行列的逻辑关系-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML创建完整表格的测试代码</title>
+</head>
+
+<body>
+
+<h4>带有表头的表格：</h4>
+<table border="3">
+<tr>
+<th>姓名</th>
+<th>学号</th>
+<th>性别</th>
+</tr>
+
+<tr>
+<td>周敏</td>
+<td>123456789</td>
+<td>女</td>
+</tr>
+<tr>
+<td>张三</td>
+<td>&nbsp;</td>
+<td>男</td>
+</tr>
+</table>
+
+<h4>带有表头及标题的表格：</h4>
+<table border="3">
+<caption>学生信息表</caption>
+<tr>
+<th>姓名</th>
+<th>学号</th>
+<th>性别</th>
+</tr>
+
+<tr>
+<td>周敏</td>
+<td>123456789</td>
+<td>女</td>
+</tr>
+<tr>
+<td>张三</td>
+<td>&nbsp;</td><!--空单元格的使用-->
+<td>男</td>
+</tr>
+</table>
+
+<h4>跨行或跨列的表格：</h4>
+<table border="3">
+<tr>
+<th>姓名</th>
+<th colspan="2">电话</th><!--跨列-->
+</th>
+
+<tr>
+<td>张三</td>
+<td>12345</td>
+<td>6780</td>
+</tr>
+</table>
+
+<table border="3">
+<tr>
+<th>姓名</th>
+<td>周敏</td>
+</tr>
+
+<tr>
+<th rowspan="2">电话</th><!--跨行-->
+<td>123456</td>
+</tr>
+<tr>
+<td>78990</td>
+</tr>
+</table>
+
+<h4>表格内的标签（即如何显示在不同的元素内显示元素）</h4>
+<table border="1">
+<tr>
+<td>
+<p>这是一个段落</p>
+<p>这是另一个段落</p>
+</td>
+<td>这个单元包含一个表格：
+<table border="3">
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+</table>
+
+<tr>
+<td>这个单元包含一个列表：
+<ul>
+<li>苹果</li>
+<li>香蕉</li>
+<li>樱桃</li>
+</ul>
+</td>
+<td>Hello</td>
+</table>
+
+<h4>单元格间距（使用cellpadding来创建单元格内容与其边框之间的空白）</h4>
+<h5>没有使用cell padding:</h5>
+<table border="1">
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+</table>
+<h5>使用cellpadding:</h5>
+<table border="1" cellpadding="20">
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+</table>
+
+<h4>单元格间距（使用cellspaceing增加单元格之间的距离）：</h4>
+<h5><h5>没有使用cell spacing:</h5>
+<table border="3">
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+</table>
+<h5>使用cellpadding:</h5>
+<table border="3" cellspacing="10">
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+</table>
+
+<h4>向表格添加背景颜色或者背景图像：</h4>
+<table border="1">
+<tr>
+<td bgcolor="red">1</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td background="C:\Users\FGC\Pictures\Saved Pictures\1.jpg" width="50" height="50">3</td>
+<td>4</td>
+</tr>
+</table>
+
+<h4>在表格单元中排列内容（使用align属性排列单元格内容，以便创建一个美观的表格）：</h4>
+<table border="1">
+<tr>
+<th align="center">姓名</th>
+<th align="right">电话</th>
+</tr>
+
+<tr>
+<td align="center">张三</td>
+<td align="center">李四</td>
+</tr>
+
+<tr>
+<td align="right">1234511111</td>
+<td align="right">6789011111</td>
+</tr>
+</table>
+
+<h4>框架属性（使用frame属性来控制围绕表格的边框）：</h4>
+<p><b>注释：</b>frame属性无法在Internet Explorer中正确的显示</p>
+<table frame="box">
+<tr>
+<th>姓名</th>
+<th>电话</th>
+</tr>
+
+<tr>
+<td>张三</td>
+<td>1234567</td>
+</tr>
+</table>
+<p></p>
+
+<table frame="above">
+<tr>
+<th>姓名</th>
+<th>电话</th>
+</tr>
+
+<tr>
+<td>张三</td>
+<td>1234567</td>
+</tr>
+</table>
+<p></p>
+
+<table frame="below">
+<tr>
+<th>姓名</th>
+<th>电话</th>
+</tr>
+
+<tr>
+<td>张三</td>
+<td>1234567</td>
+</tr>
+</table>
+<p></p>
+
+<table frame="hsides">
+<tr>
+<th>姓名</th>
+<th>电话</th>
+</tr>
+
+<tr>
+<td>张三</td>
+<td>1234567</td>
+</tr>
+</table>
+<p></p>
+
+<table frame="vsides">
+<tr>
+<th>姓名</th>
+<th>电话</th>
+</tr>
+
+<tr>
+<td>张三</td>
+<td>1234567</td>
+</tr>
+</table>
+
+
+</body>
+</html>
